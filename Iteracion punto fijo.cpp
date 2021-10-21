@@ -2,6 +2,7 @@
 using namespace std;
 
 double f(double x){
+    //Write your function here
     return 1.08012;
     //(3.0*x*x-3.5)/(double)sqrt(x) + x;
     //(2.0*x*x*x-11.7*x*x-5.0)/-17.7;
@@ -22,11 +23,7 @@ void puntoFijo(int cifras, double xi){
     aproxRaiz = xi;
     while(abs(errorRelativo) > errorPrevio && iteracion<INT_MAX ){
         aproxRaiz = f(aproxRaiz);
-        //if(aproxRaiz!=0)
-            errorRelativo = ((aproxRaiz-previaAproxRaiz)/aproxRaiz)*100.0; // ERROR APROXIMADO para resultados del profe
-        //if(iteracion==1)
-        //    printf("|%10d\t|%10.10f\t|%10.10f\t|%10s\t|\n", iteracion, previaAproxRaiz, aproxRaiz, "  ");
-        //else
+        errorRelativo = ((aproxRaiz-previaAproxRaiz)/aproxRaiz)*100.0;
         printf("|%10d\t|%10.10f\t|%10.10f\t|%10.10f\t|\n", iteracion, previaAproxRaiz, aproxRaiz, errorRelativo);
         iteracion++;
         previaAproxRaiz = aproxRaiz;

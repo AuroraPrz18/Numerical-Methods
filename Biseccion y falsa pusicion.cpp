@@ -2,6 +2,7 @@
 using namespace std;
 
 double f(double x){
+    //Write your function here
     return (3.0*x*x-3.5)/(double)sqrt(x);
     //6.0*x*x-8.0*x-4.375;
     //2*x*x*x-11.7*x*x+17.7*x-5;
